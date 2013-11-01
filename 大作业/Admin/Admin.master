@@ -1,0 +1,248 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <style type="text/css">
+        #left
+      {
+        vertical-align:top;
+        text-align:center;
+        border: 2px solid#999999;
+        width: 165px;
+        height: 407px;
+        float:left;
+        
+        }
+     #right
+        {
+          border: 2px solid#999999;
+          
+            height: 384px;
+           margin-left: 180px;
+           margin-top:5px;
+            }
+     #top
+        {
+          border: 2px solid#999999;
+          
+            height: 15px;
+           margin-left: 210px;
+           
+            }
+     #content
+        {
+          text-align:left;
+          border: 2px solid#999999;
+            width: 560px;
+            height: 400px;
+        }
+       #list
+            {
+            border: 2px solid#999999;
+            height: 15px;
+           margin-left: 180px;
+                
+                }
+    
+      
+    
+            
+        .style10
+        {
+            height: 9px;
+            font-size: small;
+        }
+    
+    
+      
+    
+        .style12
+        {
+            font-size: small;
+        }
+    
+    
+      
+    
+        .style13
+        {
+            width: 30px;
+            height: 51px;
+        }
+    
+    
+      
+    
+        .style14
+        {
+            color: #0066FF;
+        }
+    
+    
+      
+    
+        .style15
+        {
+            width: 157px;
+            height: 21px;
+        }
+        .style16
+        {
+            width: 159px;
+            height: 21px;
+        }
+        .style17
+        {
+            width: 151px;
+            height: 23px;
+        }
+        .style18
+        {
+            width: 146px;
+            height: 22px;
+        }
+        .style19
+        {
+            width: 90px;
+            height: 59px;
+        }
+        .style20
+        {
+            width: 20px;
+            height: 20px;
+        }
+        .style21
+        {
+            width: 64px;
+            height: 51px;
+        }
+        .style22
+        {
+            height: 25px;
+        }
+    
+    
+      
+    
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+<body style="width:1024px; margin-left:auto; margin-right:auto;">
+    <form id="form1" runat="server">
+<div style="height: 100%; width:87%">
+<div align="left" 
+        
+        
+        style="background-image: url('/Website/Images/Login_bg.PNG'); width: 745px; background-color: #C0C0C0;">
+    <span class="style14">欢迎您</span>：[<asp:Label ID="Label1" runat="server" 
+        Text="Label" ForeColor="Red"></asp:Label>
+    ]&nbsp;【<asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click" 
+        style="font-size: small" PostBackUrl="~/login.aspx">退出</asp:LinkButton>
+    】&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:HyperLink ID="HyperLink15" runat="server" ForeColor="#0066FF">计算机科学与工程系作业系统</asp:HyperLink>
+    </div>
+<div style="height: 415px; width: 756px;" >
+<div id="left" align="center" style="background-color: #3399ff">&nbsp;<table 
+        style="height: 372px; width: 157px" >
+    <tr>
+        <td class="style13" style="border-style: inset; padding: inherit;" 
+            bgcolor="#3399FF"  >
+            <img class="style19" src="../image/head.PNG" alt="作业系统" /></td>
+        <td bgcolor="#3399FF" class="style21">
+            <span class="style12"><br />
+            作业系统<br />
+            </span><br />
+            <img class="style20" src="../image/home.png" /><asp:HyperLink ID="HyperLink13" runat="server" 
+                NavigateUrl="~/Admin/UserCentre.aspx" 
+                style="font-size: small; text-decoration:none" ForeColor="White">用户中心</asp:HyperLink>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" class="style22">
+            <img class="style15" src="../image/people.PNG" /></td>
+    </tr>
+    <tr>
+        <td colspan="2" class="style10">
+            <asp:HyperLink ID="HyperLink1" runat="server" 
+                NavigateUrl="~/Admin/StudentAdd.aspx" style="text-decoration:none">学生添加</asp:HyperLink>
+            &nbsp;
+            <asp:HyperLink ID="HyperLink2" runat="server" 
+                NavigateUrl="~/Admin/StudentManage.aspx" style="text-decoration:none">学生管理</asp:HyperLink>
+            <hr style="height: -12px; width: 146px" />
+            <asp:HyperLink ID="HyperLink3" 
+                runat="server" NavigateUrl="~/Admin/TeacherAdd.aspx" style="text-decoration:none">教师添加</asp:HyperLink>
+                 &nbsp;
+            <asp:HyperLink ID="HyperLink4" runat="server" 
+                NavigateUrl="~/Admin/TeacherManage.aspx" style="text-decoration:none">教师管理</asp:HyperLink>
+             <hr style="height: -12px; width: 144px;" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <img class="style16" src="../image/course.PNG" /></td>
+    </tr>
+    <tr>
+        <td  colspan="2" style="font-size: small">
+            <asp:HyperLink ID="HyperLink5" runat="server" 
+                NavigateUrl="~/Admin/CourseAdd.aspx" style="text-decoration:none">课程添加</asp:HyperLink>
+             &nbsp;
+            <asp:HyperLink ID="HyperLink6" runat="server" 
+                NavigateUrl="~/Admin/CourseManage.aspx" style="text-decoration:none">课程管理</asp:HyperLink>
+            <hr style="height: -12px; width: 144px" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <img class="style17" src="../image/job.PNG" /></td>
+    </tr>
+    <tr>
+        <td  colspan="2" style="font-size: small" align="char">
+            <asp:HyperLink ID="HyperLink7" runat="server" 
+                NavigateUrl="~/Admin/WorkAdd.aspx" style="text-decoration:none">作业添加</asp:HyperLink>
+            &nbsp;
+            <asp:HyperLink ID="HyperLink9" runat="server" 
+                NavigateUrl="~/Admin/WorkManage.aspx" style="text-decoration:none">作业管理</asp:HyperLink>
+            <br />
+<hr style="height: -12px; width: 144px" />
+            <asp:HyperLink ID="HyperLink14" runat="server" 
+                NavigateUrl="~/Admin/StudentWork.aspx">学生作业材料</asp:HyperLink>
+            &nbsp;&nbsp; <hr style="height: -12px; width: 144px" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <img class="style18" src="../image/grade.PNG" /></td>
+    </tr>
+    <tr>
+        <td colspan="2" style="font-size: small">
+            <asp:HyperLink ID="HyperLink10" runat="server" style="text-decoration:none" 
+                NavigateUrl="~/Admin/SearcheGrade.aspx">成绩查询及导出</asp:HyperLink>
+            &nbsp;
+                        
+            <hr style="height: -12px; width: 144px" />
+        </td>
+    </tr>
+    </table>
+    </div>
+<div id="right">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    <div id="content"></div>
+    </asp:ContentPlaceHolder>
+    </div>
+</div>
+<div style="height: 83px" align="center">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <br />
+    <br />
+&nbsp;<asp:HyperLink ID="HyperLink16" runat="server" ForeColor="#0066FF">计算机科学与工程系作业系统</asp:HyperLink>
+    |<asp:HyperLink ID="HyperLink17" runat="server" ForeColor="#0066FF">意见反馈</asp:HyperLink>
+    |<asp:HyperLink ID="HyperLink18" runat="server" ForeColor="#0066FF">帮助中心</asp:HyperLink>
+    <br />
+    Copyright@2009-2012,版权所有</div></div>
+    </form>
+</body>
+</html>
